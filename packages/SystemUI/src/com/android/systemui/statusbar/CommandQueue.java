@@ -94,6 +94,7 @@ public class CommandQueue extends IStatusBar.Stub {
     private static final int MSG_SHOW_CHARGING_ANIMATION       = 44 << MSG_SHIFT;
     private static final int MSG_SHOW_PINNING_TOAST_ENTER_EXIT = 45 << MSG_SHIFT;
     private static final int MSG_SHOW_PINNING_TOAST_ESCAPE     = 46 << MSG_SHIFT;
+    private static final int MSG_IN_DISPLAY_FINGERPRINT        = 47 << MSG_SHIFT;   
     private static final int MSG_SCREEN_PINNING_STATE_CHANGED  = 47 << MSG_SHIFT;
     private static final int MSG_LEFT_IN_LANDSCAPE_STATE_CHANGED  = 48 << MSG_SHIFT;
     private static final int MSG_TOGGLE_FLASHLIGHT             = 49 << MSG_SHIFT;
