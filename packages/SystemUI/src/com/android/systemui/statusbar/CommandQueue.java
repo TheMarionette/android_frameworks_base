@@ -624,14 +624,6 @@ public class CommandQueue extends IStatusBar.Stub {
         }
     }
 
-    @Override
-    public void toggleCameraFlash() {
-        synchronized (mLock) {
-            mHandler.removeMessages(MSG_TOGGLE_CAMERA_FLASH);
-            mHandler.sendEmptyMessage(MSG_TOGGLE_CAMERA_FLASH);
-        }
-    }
-
     private final class H extends Handler {
         private H(Looper l) {
             super(l);
@@ -883,11 +875,6 @@ public class CommandQueue extends IStatusBar.Stub {
                         mCallbacks.get(i).handleInDisplayFingerprintView(
                                 (boolean)((SomeArgs)msg.obj).arg1,
                                 (boolean)((SomeArgs)msg.obj).arg2);
-                    }
-                    break;
-                case MSG_SCREEN_PINNING_STATE_CHANGED:
-                    for (int i = 0; i < mCallbacks.size(); i++) {
-                        mCallbacks.get(i).screenPinningStateChanged(msg.arg1 != 0);
                     }
                     break;
                 case MSG_LEFT_IN_LANDSCAPE_STATE_CHANGED:
